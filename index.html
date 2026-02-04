@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leo Melvin | Community Moderator</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- IMPORTANT: root-relative path -->
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <div class="cv-container">
-    <!-- Header -->
-    <header class="cv-header">
-      <div class="profile-pic">
-        <img src="assets/profile.png" alt="Leo Melvin">
-      </div>
-      <div class="header-info">
-        <h1>Melvin</h1>
+  <main class="card">
+    <header class="header">
+      <img src="/assets/profile.png" alt="Leo Melvin" class="avatar" />
+
+      <div class="info">
+        <h1>Leo Melvin</h1>
         <p class="role">Community Moderator</p>
-        <p class="about">
-          Web3 community moderator focused on Discord management, user support, 
-          and safe, well-run communities. Experienced during launches and high-traffic periods.
-        </p>
-        <div class="contact">
-          <p><span>📧</span> leomelvin40@gmail.com</p>
-          <p><span>🌐</span> <a href="https://leo-cv.vercel.app" target="_blank">leo-cv.vercel.app</a></p>
-          <p><span>📍</span> 14 Dominion, Abayi, Aba</p>
-        </div>
+
+        <ul class="contact">
+          <li>📧 leomelvin40@gmail.com</li>
+          <li>🌐 leo-cv-xi.vercel.app</li>
+          <li>📍 14 Dominion, Abayi, Aba</li>
+        </ul>
       </div>
     </header>
 
-    <!-- Main sections -->
-    <main class="cv-main">
-      <!-- Work Experience -->
-      <section class="work">
+    <section class="grid">
+      <div>
         <h2>Work Experience</h2>
-        <div class="job">
-          <h3>PUNKS <span>2024</span></h3>
-          <p>Moderated a 3,000+ member Punks community, handled spam and scams, 
-          supported users, and kept discussions active during drops and events.</p>
+        <div class="item">
+          <strong>PUNKS <span>2024</span></strong>
+          <p>
+            Moderated a 3,000+ member community, handled spam and scams,
+            supported users, and kept discussions active during drops
+            and events.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <!-- Languages -->
-      <section class="languages">
+      <div>
         <h2>Languages</h2>
-        <ul>
-          <li>English</li>
-          <li>Pidgin</li>
+        <ul class="list">
+          <li>✔ English</li>
+          <li>✔ Pidgin</li>
         </ul>
-      </section>
+      </div>
 
-      <!-- Core Skills -->
-      <section class="skills">
+      <div>
         <h2>Core Skills</h2>
-        <ul>
-          <li>Discord Moderation & Management</li>
+        <ul class="list">
+          <li>✔ Discord Moderation & Management</li>
+          <li>✔ Community Support</li>
+          <li>✔ Scam Detection</li>
         </ul>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
