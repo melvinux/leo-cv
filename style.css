@@ -1,3 +1,4 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,79 +7,83 @@
     "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
 
+/* PAGE */
 body {
-  background: #0e0e0e;
+  background-color: #0e0e0e;
   color: #eaeaea;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* PAGE WRAPPER — allows scrolling */
+/* MAIN WRAPPER (SCROLLABLE) */
 .page {
   max-width: 900px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px 20px;
 }
 
 /* HEADER */
 .header {
   display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 32px;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
+/* IMAGE — THIS IS THE CRITICAL FIX */
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: auto;          /* NEVER crop */
+  max-width: 100%;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #2a2a2a;
+  object-fit: contain;   /* NOT cover */
+  flex-shrink: 0;
 }
 
+/* TEXT */
 .header-text h1 {
-  font-size: 2rem;
+  font-size: 2.1rem;
 }
 
 .role {
   color: #ff4d4d;
-  margin: 6px 0;
+  margin: 6px 0 10px;
+  font-weight: 500;
 }
 
-.meta {
-  font-size: 0.9rem;
+.contact {
+  font-size: 0.95rem;
   color: #bdbdbd;
 }
 
 /* SECTIONS */
 section {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   border-left: 3px solid #ff4d4d;
-  padding-left: 8px;
+  padding-left: 10px;
 }
 
-.block {
-  margin-bottom: 16px;
+.job {
+  margin-bottom: 18px;
 }
 
-.block h3 {
+.job h3 {
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
 }
 
-.block p {
+.job p {
   font-size: 0.95rem;
   color: #cfcfcf;
 }
 
 /* LISTS */
 ul {
-  list-style: disc;
   padding-left: 20px;
 }
 
@@ -86,24 +91,25 @@ li {
   margin-bottom: 6px;
 }
 
-/* MOBILE POLISH — but SAME CONTENT */
-@media (max-width: 600px) {
+/* MOBILE — SAME CONTENT, NO CLIPPING */
+@media (max-width: 640px) {
   .header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
   }
 
   .header-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .page {
-    padding: 16px;
+    padding: 20px 16px;
   }
 }
+
 
